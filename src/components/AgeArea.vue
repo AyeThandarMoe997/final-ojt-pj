@@ -31,7 +31,6 @@ export default {
             this.$emit('dateData', this.dateofbrith);
             const currentDate = new Date();
             let age = currentDate.getFullYear() - this.dateofbrith.getFullYear();
-            console.log(currentDate.getFullYear());
             const month = currentDate.getMonth() - this.dateofbrith.getMonth();
             if(month < 0 || month === 0 && currentDate.getDate < this.dateofbrith.getDate) {
                 age = age - 1;

@@ -36,8 +36,5 @@ export default {
             user_info: this.$store.state.users,
         }
     },
-    created() {
-        console.log(this.user_info);
-    }
 }
 </script>

@@ -108,12 +108,10 @@ export default {
     onChange(event) {
       var data = event.target.value;
       this.gender = data;
-      console.log(data);
     },
     roleOnChange(event) {
       var role = event.target.value;
       this.user_role = role;
-      console.log(role);
     },
     toggleTextConfirm() {
       if(this.user_name == ''){
@@ -153,7 +151,6 @@ export default {
       } else {
         this.textCancle = "Cancle";
       }
-      console.log(this.expanded);
     },
     getDOB(event) {
       this.dob = event;
@@ -161,8 +158,6 @@ export default {
     },
     dataRegister() {
       if(this.expanded == 1) {
-        console.log('in Register');
-        console.log(this.dob);
         this.user_info.id = this.user_id;
         this.user_info.name= this.user_name;
         this.user_info.gender= this.gender;
@@ -170,7 +165,6 @@ export default {
         this.user_info.address = this.address;
         this.user_info.dob = this.formatDate;
         this.user_info.role = this.user_role;
-        console.log(this.user_info);
         this.$store.commit('addUsers', this.user_info)
         this.$router.push({name: 'user-data', params: {user_info: this.user_info}});
       }
@@ -183,7 +177,6 @@ export default {
       this.address = '',
       this.dateofbrith = new Date();
       this.user_role = ''
-      console.log(this.gender);
     }
   }
 }

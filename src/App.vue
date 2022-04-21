@@ -14,7 +14,6 @@ export default {
   },
   methods: {
     addUser() {
-      console.log(this.id);
       this.$store.commit('addUserId', this.id)
       this.$router.push({name: 'user-register', params: { id: this.id}});
     }
@@ -37,5 +36,4 @@ export default {
   font-size: 15px;
   cursor: pointer;
 }
-
 </style>
